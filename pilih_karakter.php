@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  if(empty($_SESSION['user_id']))
+    header("Location:index.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +81,7 @@
       var id_karakter, hasil;
       id_karakter = document.getElementById("id1").value;
       
-      document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
+      // document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
 
       if (window.XMLHttpRequest)
       {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -102,7 +107,7 @@
       var id_karakter, hasil;
       id_karakter = document.getElementById("id2").value;
       
-      document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
+      // document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
 
       if (window.XMLHttpRequest)
       {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -128,7 +133,7 @@
       var id_karakter, hasil;
       id_karakter = document.getElementById("id3").value;
       
-      document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
+      // document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
 
       if (window.XMLHttpRequest)
       {// code for IE7+, Firefox, Chrome, Opera, Safari
@@ -154,7 +159,7 @@
       var id_karakter, hasil;
       id_karakter = document.getElementById("id4").value;
       
-      document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
+      // document.getElementById("deskripsi_karakter").innerHTML = id_karakter;
 
       if (window.XMLHttpRequest)
       {// code for IE7+, Firefox, Chrome, Opera, Safari

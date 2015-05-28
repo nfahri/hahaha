@@ -84,7 +84,7 @@
 			}
 			else
 			{
-				echo $id_karakter;
+				
 				echo "kosong";
 			}
 		}
