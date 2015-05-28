@@ -90,7 +90,7 @@
 					</div>
 					<h2>Buat akun</h2>
 
-					<form class="form-horizontal" action="index.html" method="post">
+					<form class="form-horizontal" action="../daftar_check.php" method="post">
 						<fieldset>
 							
 							<div class="input-prepend" title="Nama">
@@ -113,12 +113,12 @@
 								<label>Jenis Kelamin</label>
 								<div id="radio-container">
 								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios1" value="L" checked="">
+									<input type="radio" name="jenis_kelamin" id="optionsRadios1" value="L" checked="">
 									Laki-laki
 								  </label>
 								  <div style="clear:both"></div>
 								  <label class="radio">
-									<input type="radio" name="optionsRadios" id="optionsRadios2" value="P">
+									<input type="radio" name="jenis_kelamin" id="optionsRadios2" value="P">
 									Perempuan
 								  </label>
 								</div>
@@ -127,7 +127,7 @@
 
 							  <div id="tgl-lahir">
 							  <label>Tanggal Lahir</label>
-						        <select>
+						        <!-- <select>
 						          <option value="1" selected="selected">1</option>
 						          <option value="2">1</option>
 						          <option value="3">2</option>
@@ -188,7 +188,8 @@
 						          <option value="10">2000</option>
 						          <option value="11">2001</option>
 						          <option value="12">2002</option>
-						        </select>
+						        </select> -->
+						        <input type="date" name="tgl_lahir"/>
 						       </div>
 							  
 							  <!-- <div class="control-group">

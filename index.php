@@ -87,7 +87,7 @@
               </button>
               <!-- LOGO -->
               <!-- TEXT BASED LOGO -->
-              <a class="navbar-brand" href="index.html"><span>Hantu </span>Hantam <span>Hantu</span></a>              
+              <a class="navbar-brand" href="index.php"><span>Hantu </span>Hantam <span>Hantu</span></a>              
               <!-- IMG BASED LOGO  -->
                <!-- <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"></a>  -->            
                      
@@ -96,14 +96,17 @@
               <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
                 <!-- <li class="active"><a href="metro/login.php">Masuk</a></li> -->
                 <?php
-                  if(isset($_SESSION['user_id']))
-                    echo "<li><a href='logout.php'>Keluar</a></li>";
-                  elseif(isset($_GET['status']) && $_GET['status']=="gagal_login"){
-                    echo "LOGIN GAGAL!!";
-                    echo "<li><a href='metro/login.php'>Masuk</a></li>
-                <li><a href='metro/daftar.php'>Daftar</a></li>";
+                  if(isset($_GET['status'])){
+                    if($_GET['status']=="gagal_daftar")
+                      echo "<li class='active'><a href='#'>Pendaftaran yang anda lakukan gagal!!&nbspSilakan coba lagi.</a></li>";
+                    elseif($_GET['status']=="gagal_login")
+                      echo "<li class='active'><a href='#'>Anda gagal melakukan login ke akun anda, silakan coba lagi.</a></li>";                                          
+                    elseif($_GET['status']=="berhasil_daftar")
+                      echo "<li class='active'><a href='#'>Pendaftaran yang anda lakukan berhasil, silakan lanjutkan masuk.</a></li>";                                          
                   }
 
+                  if(isset($_SESSION['user_id']))
+                    echo "<li><a href='logout.php'>Keluar</a></li>";
                   else
                     echo "<li><a href='metro/login.php'>Masuk</a></li>
                 <li><a href='metro/daftar.php'>Daftar</a></li>";
