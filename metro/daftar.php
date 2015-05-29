@@ -189,7 +189,14 @@
 						          <option value="11">2001</option>
 						          <option value="12">2002</option>
 						        </select> -->
-						        <input type="date" name="tgl_lahir"/>
+						        <?php
+							        	include('../check_user_browser.php');
+							        	if($ua=="Google Chrome")
+							        		echo "<input type=\"date\" name=\"tgl_lahir\"/>";
+							        	else
+							        		echo "<input type=\"date\" name=\"tgl_lahir\" placeholder=\"YYYY-mm-dd\" title=\"masukkan tahun-bulan-tanggal kelahiran anda\"";
+							        ?>
+						        
 						       </div>
 							  
 							  <!-- <div class="control-group">

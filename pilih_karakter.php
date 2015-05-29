@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include('check_user_browser.php');
   if(empty($_SESSION['user_id']))
     header("Location:index.php");
 ?>
@@ -296,7 +297,10 @@
 <!-- initialize jQuery Library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Preloader js file -->
-    <script src="js/queryloader2.min.js" type="text/javascript"></script>
+     <?php
+      if($ua=="Google Chrome")
+        echo "<script src=\"js/queryloader2.min.js\" type=\"text/javascript\"></script>";
+    ?>
     <!-- For smooth animatin  -->
     <script src="js/wow.min.js"></script>  
     <!-- Bootstrap js -->
